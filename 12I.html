@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo 12I</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .facebook-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            text-align: center;
+            background-color: #1877F2;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: white;
+        }
+        .article {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+        .article h2 {
+            color: #004080;
+        }
+        .article img {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+        .article video {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .comments {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border: 1px solid #ccc;
+        }
+        .comments h3 {
+            color: #004080;
+        }
+        .comment-box {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .comment-button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #004080;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .comment-button:hover {
+            background-color: #003366;
+        }
+        .comment-list {
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #004080;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Báo 12I
+    </header>
+    <a href="https://www.facebook.com" class="facebook-button" target="_blank">Truy cập Facebook</a>
+    <div class="container">
+        <div class="article">
+            <h2>20/11 Cuối cùng</h2>
+            <img src="2011.jpg" alt="">
+            <p>Bất ổn 28/32 </p>
+        </div>
+        <div class="article">
+            <h2>Ngày quốc tế đàn ông cười ẻ </h2>
+            <img src="1911.jpg" alt="">
+            <p>Cũng zui</p>
+        </div>
+        <div class="article">
+            <h2>Văn nghệ siêu hài hước</h2>
+            <p>:)) chưa được chọn bao giờ</p>
+            <video controls>
+                <source src="2011.mp4" type="">
+            </video>
+        </div>
+        <div class="comments">
+            <h3>Bình luận</h3>
+            <textarea class="comment-box" placeholder="Nhập bình luận của bạn..."></textarea>
+            <button class="comment-button" onclick="addComment()">Gửi</button>
+            <div class="comment-list" id="comment-list">
+                <p>Chưa có bình luận nào. Hãy là người đầu tiên bình luận!</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Báo Trường - Mọi quyền được bảo lưu.
+    </footer>
+    <script>
+        function addComment() {
+            var commentBox = document.querySelector(".comment-box");
+            var commentList = document.getElementById("comment-list");
+            var commentText = commentBox.value.trim();
+
+            if (commentText !== "") {
+                var newComment = document.createElement("p");
+                newComment.textContent = commentText;
+                commentList.appendChild(newComment);
+                commentBox.value = "";
+            }
+        }
+    </script>
+</body>
+</html>
